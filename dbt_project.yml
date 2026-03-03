@@ -40,6 +40,7 @@ models:
     # Applies to all files under models/staging/
     staging:
       jaffle_shop:
+        +database: '{{ env_var('DBT_DATABASE','DBT_DEV_DB') }}'
         +materialized: view
     
     marts:
